@@ -1,0 +1,194 @@
+:root {
+	--primary: rgb(3, 123, 147);
+	--secondary: #d33f49;
+	--light: #fff;
+	--dark: #000;
+	--diabled: #e7e7e7;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://www.macworld.es/cmsdata/features/3791087/fondos-pantalla-apple_thumb1200_16-9.jpg");
+	background-size: cover;
+}
+
+*:first-letter {
+	text-transform: capitalize;
+}
+
+.roundBorder {
+	border-radius: 15px;
+}
+
+.list {
+	margin: 25px;
+	padding: 25px;
+	background-color: var(--light);
+	width: 100%;
+	max-width: 350px;
+}
+
+.date {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dateRight {
+	display: flex;
+	align-items: center;
+}
+
+#dateNumber {
+	font-size: 60px;
+}
+
+#dateText {
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText {
+	font-weight: bold;
+	color: rgb(3, 123, 147);
+}
+
+#dateMonth,
+#dateYear {
+	margin-left: 7px;
+	font-size: 24px;
+	color: rgb(3, 123, 147);
+}
+
+form {
+	margin: 20px 0;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto 35px auto;
+	grid-column-gap: 15px;
+}
+
+input {
+	border: none;
+	padding-left: 10px;
+	background-color: var(--diabled);
+}
+
+input:focus {
+	outline: none;
+}
+
+.addTaskButton,
+.orderButton {
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.addTaskButton {
+	height: 35px;
+	border-radius: 50%;
+	font-size: 14px;
+	background-color: var(--diabled);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.orderButton {
+	background-color: var(--secondary);
+	color: var(--light);
+}
+
+.task {
+	background-color: var(--primary);
+	padding: 15px;
+	margin-top: 15px;
+	color: var(--light);
+	cursor: pointer;
+}
+
+.done {
+	background-color: var(--diabled);
+	text-decoration: line-through;
+	color: var(--dark);
+}
+
+/* Responsive */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.js .navegacion {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		position: absolute;
+		top: 43px;
+		left: 30px;
+		right: 30px;
+		background-color: rgb(0, 0, 0);
+	}
+
+	.js .navegacion a {
+		padding: 5px 10px;
+		color: rgb(0, 0, 0);
+		border-top: 1px solid rgb(255, 255, 255);
+	}
+
+	.js .navegacion.menu-desplegado {
+		max-height: 200px;
+	}
+
+	.Principal {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+	.Secundario {
+		width: 50%;
+		float: left;
+		min-height: 350px;
+		min-width: 300px;
+	}
+	.Secundario2 {
+		width: 50%;
+		float: right;
+		min-height: 350px;
+		min-width: 300px;
+	}
+	.Secundario3 {
+		width: 100%;
+		float: left;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.Calculadora {
+		padding-left: 100px;
+		padding-right: 100px;
+		display: flow-root;
+	}
+
+	.Lista-de-tareas {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.Tienda-Gi-Store {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.Contacto {
+		width: 50%;
+		float: left;
+		max-height: 150px;
+		min-width: 300px;
+	}
+}
